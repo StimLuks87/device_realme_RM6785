@@ -1,0 +1,110 @@
+# Brand
+Build.BRAND=MTK
+
+# Charger
+ro.charger.enable_suspend=true
+
+# Radio
+persist.sys.radio.force_lte_ca=true
+persist.sys.fflag.override.settings_provider_model=false
+
+# IPO
+sys.ipo.pwrdncap=2
+sys.ipo.disable=1
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+
+# LMKD
+ro.config.low_ram=false
+ro.lmk.log_stats=true
+
+# Order
+ro.product.property_source_order=odm,vendor,product,system
+
+# Product
+ro.product.board=oppo6785
+ro.board.platform=mt6785
+
+# System
+persist.sys.binary_xml=false
+
+# Camera
+persist.vendor.camera.privapp.list=com.android.camera,com.google.camera,org.lineageos.aperture
+vendor.camera.aux.packagelist=com.android.camera,com.google.camera,org.lineageos.aperture
+vendor.camera.aux.packageexcludelist=org.telegram.messenger,com.microsoft.teams,com.discord
+
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# IMS
+persist.dbg.volte_avail_ovr=1
+persist.dbg.ims_volte_enable=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
+# USB 
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+
+# Zygote
+ro.zygote.preload.enable=0
+zygote.critical_window.minute=10
+persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Display Refresh Rate
+persist.sys.display-rate=90
+
+# Display Settings
+ro.min_pointer_dur=8
+ro.hwui.disable_sc=false
+
+# Display Enhancements
+ro.mtk_display_ovl_support=1
+
+# Network Optimization
+ro.mtk_data_speed_label=true
+ro.mtk_network_management=1
+persist.radio.smart_ap=1
+persist.radio.apm_sim_not_pwdn=1
+
+# Network Performance
+ro.config.hw_fast_dormancy=1
+ro.config.hw_ram=true
+ro.config.hw_fold=true
+ro.config.hw_ram=true
+
+# GPU Rendering
+ro.sf.lcd_density=380
+debug.hwui.renderer=skiagl
+debug.hwui.render_dirty_regions=false
+
+# GPU Performance Optimization
+debug.sf.hw=1
+ro.mtk_perf_dds_cpu=1
+
+# GPU Optimization
+ro.mtk_gpu_optimizations=1
+
+# Audio Enhancements
+ro.mtk_audio_lossless_support=1
+
+# Audio Performance
+ro.mtk_audenh_support=1
+
+# Audio Tuning
+ro.config.hd_voicemail=1
+persist.sys.audio.out.vol=7
+
+# Battery Optimization
+ro.config.max.starting_bg=4
+ro.sys.fw.bg_apps_limit=4
+pm.sleep_mode=1
