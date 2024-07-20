@@ -24,7 +24,7 @@ unzip device/realme/RM6785/CameraGo/CameraGo.zip -d device/realme/RM6785/CameraG
 # Make the build faster using ccache
 export USE_CCACHE=1
 export CCACHE_COMPRESS=1
-export CCACHE_DIR=~/ccache
+export CCACHE_EXEC=/usr/bin/ccache
 export CCACHE_MAXSIZE=50G
 
 # Disable and stop systemd-oomd service.
