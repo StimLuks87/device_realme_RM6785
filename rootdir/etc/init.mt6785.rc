@@ -82,6 +82,10 @@ on charger
 
     start vendor.light-default
 
+# Adaptive charge
+    chmod 0660 /sys/class/power_supply/battery/voocchg_ing
+    chown system system /sys/class/power_supply/battery/voocchg_ing
+
 on fs
     write /proc/bootprof "INIT:Mount_START"
     wait_for_prop hwservicemanager.ready "true"

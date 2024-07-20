@@ -69,9 +69,5 @@ service vendor.charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
-    # Adaptive charge
-    chmod 0660 /sys/class/power_supply/battery/voocchg_ing
-    chown system system /sys/class/power_supply/battery/voocchg_ing
-
 on property:ro.vendor.device=*
     setprop bluetooth.device.default_name ${ro.vendor.device}

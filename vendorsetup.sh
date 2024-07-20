@@ -4,7 +4,7 @@
 git clone https://github.com/realme-mt6785-devs/proprietary_vendor_realme_RM6785-common -b lineage-21 vendor/realme/RM6785
 
 # Kernel
-git clone https://github.com/realme-mt6785-devs/android_kernel_realme_mt6785 -b lineage-21 kernel/realme/mt6785
+git clone https://github.com/StimLuks87/android_kernel_realme_mt6785 -b lineage-21 kernel/realme/mt6785
 
 # SEpolicy
 git clone https://github.com/LineageOS/android_device_mediatek_sepolicy_vndr -b lineage-21 device/mediatek/sepolicy_vndr
