@@ -38,6 +38,7 @@ PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 USE_DEX2OAT_DEBUG := false
+WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -189,6 +190,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init_RM6785_vendor
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6785.rc
+
 # Kernel
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
@@ -234,9 +239,15 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service \
+    android.hardware.secure_element@1.0-service-disabled \
     com.android.nfc_extras \
+    SecureElement \
     NfcNci \
     Tag
+
+# Secure element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor:64
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libese-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libese-nxp.conf \
@@ -348,14 +359,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# Recovery
-PRODUCT_PACKAGES += \
-    init.recovery.mt6785.rc
-
-# Secure element
-PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2.vendor:64
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0 \
@@ -389,10 +392,6 @@ PRODUCT_BOOT_JARS += \
     mediatek-telecom-common \
     mediatek-telephony-base \
     mediatek-telephony-common \
-
-# APN
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 
 # Inherit several Android Go Configurations (Beneficial for everyone, even on non-Go devices)
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
