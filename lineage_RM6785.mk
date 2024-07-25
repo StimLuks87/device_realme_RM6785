@@ -16,7 +16,7 @@ $(call inherit-product, device/realme/RM6785/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # RisingOS flags
-RISING_BUILDTYPE := Unofficial
+RISING_BUILDTYPE := UNOFFICIAL
 PRODUCT_NO_CAMERA := false
 WITH_GMS := true
 TARGET_CORE_GMS := true
